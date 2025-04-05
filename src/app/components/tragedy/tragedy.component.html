@@ -1,0 +1,5 @@
+<div class="tragedies">
+    <div *ngFor="let tragedy of (tragedies$ | async)">
+        <a [routerLink]="['/admin/hero', tragedy.id]">{{tragedy.name}}</a>
+    </div>
+</div>

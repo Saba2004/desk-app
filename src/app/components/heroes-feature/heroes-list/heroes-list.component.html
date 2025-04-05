@@ -1,0 +1,10 @@
+<button class="addUser" mat-raised-button (click)="openCreateEditDialog()" color="primary">Добавить Hero</button>
+<div class="cards">
+    @for (hero of (heroes | async); track hero) {
+        <div>
+            <app-heroes-card [hero]="hero" tragedyId="hero.tragedy_id" (deleteHero)="onDeleteHero($event)" (editHero)="openCreateEditDialog($event)"></app-heroes-card>
+        </div>
+    }
+</div>
+
+

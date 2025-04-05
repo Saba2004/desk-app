@@ -1,0 +1,10 @@
+<div class="confirmation-dialog">
+    <h1 class="dialog-title">Вы действительно хотите удалить героя?</h1>
+    <div class="dialog-content">
+        <p class="dialog-message">Это действие нельзя будет отменить. Герой будет безвозвратно удалены.</p>
+    </div>
+    <div class="dialog-actions">
+        <button mat-flat-button color="primary" class="confirm-btn" [mat-dialog-close]="true">Да, удалить</button>
+        <button mat-flat-button color="warn" class="cancel-btn" [mat-dialog-close]="false">Отмена</button>
+    </div>
+</div>

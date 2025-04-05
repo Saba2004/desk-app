@@ -1,0 +1,12 @@
+<mat-card class="hero-card" appearance="outlined">
+    <mat-card-header class="hero-header">
+      <mat-card-title class="hero-title">{{hero.desc}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="hero-content">
+      <p class="hero-position">{{hero.position}}</p>
+    </mat-card-content>
+    <mat-card-actions class="card-buttons">
+      <button mat-flat-button color="primary" class="edit-btn" (click)="onEditHero(hero)">Edit</button>
+      <button mat-raised-button color="warn" class="delete-btn" (click)="onDeleteHero(+hero.id)">Delete</button>
+    </mat-card-actions>
+</mat-card>

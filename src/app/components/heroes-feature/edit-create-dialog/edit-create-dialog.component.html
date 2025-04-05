@@ -1,0 +1,28 @@
+<h1 *ngIf="!data.isEdit" class="header">Create Hero</h1>
+<h1 *ngIf="data.isEdit" class="header">Edit Hero</h1>
+<form [formGroup]="form" class="form">
+    <mat-form-field>
+      <mat-label>Image:</mat-label>
+      <input matInput formControlName="image">
+    </mat-form-field>
+    <p style="color: red" *ngIf="form.get('image')?.invalid && form.get('image')?.touched">
+      Введите url картинки
+    </p>
+    <mat-form-field>
+      <mat-label>Desc:</mat-label>
+      <input matInput formControlName="desc">
+    </mat-form-field>
+    <p style="color: red" *ngIf="form.get('desc')?.invalid && form.get('desc')?.touched">
+      Введите телефон
+    </p>
+    <mat-form-field>
+      <mat-label>Position:</mat-label>
+      <input matInput formControlName="position">
+    </mat-form-field>
+    <p style="color: red" *ngIf="form.get('position')?.invalid && form.get('position')?.touched">
+      Введите Position
+    </p>
+    <button mat-raised-button color="accent" [disabled]="form.invalid" *ngIf="!data.isEdit" [mat-dialog-close]="infoFullFields">Create</button>
+    <button mat-raised-button color="primary" [disabled]="form.invalid" *ngIf="data.isEdit" [mat-dialog-close]="infoFullFields">Edit</button>
+  </form>
+  
